@@ -1,0 +1,45 @@
+# --- General ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Go ---
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- Node.js / TypeScript ---
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Java ---
+*.class
+*.log
+*.jar
+*.war
+target/
+.mvn/
+.gradle/
+build/
+
+# --- Rust ---
+/target/
+Cargo.lock
+**/*.rs.bk
+
