@@ -4,25 +4,12 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
+	"encoding/json/jsontext"
 	"fmt"
-
-	"github.com/gowebpki/jcs"
-	sbomvalidator "github.com/shiftleftcyber/sbom-validator"
 )
 
 // ComputeJSONHash calculates the SHA-256 hash of a JSON SBOM
 func ComputeJSONHash(input []byte) (string, error) {
-	// Detect SBOM format and validate
-	isValid, errors, err := sbomvalidator.ValidateSBOMData(input)
-	if err != nil {
-		return "", fmt.Errorf("SBOM validation failed: %v", err)
-	}
-	if isValid {
-		fmt.Println("SBOM is valid!")
-	} else {
-		return "", fmt.Errorf("SBOM validation errors: %v", errors)
-	}
-
 	// Parse JSON
 	var data map[string]interface{}
 	if err := json.Unmarshal(input, &data); err != nil {
@@ -61,10 +48,8 @@ func ComputeJSONHash(input []byte) (string, error) {
 	}
 
 	// 3. Apply RFC 8785 (JCS)
-	canonicalBytes, err := jcs.Transform(jsonBytes)
-	if err != nil {
-		return "", fmt.Errorf("JCS transformation failed: %w", err)
-	}
+	canonicalBytes := jsontext.Value(jsonBytes)
+	canonicalBytes.Canonicalize()
 
 	// 4. Hash the canonical bytes
 	hash := sha256.Sum256(canonicalBytes)
