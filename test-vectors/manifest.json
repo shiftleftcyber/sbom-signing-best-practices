@@ -1,55 +1,55 @@
 [
     {
-        "file": "cyclonedx-1.7/json/authenticity-verification.json",
+        "file": "cyclonedx-1.7/json/authenticity-verification.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Authenticity Verification",
         "sha256": "500005de7b21a9f44aa3a73f793f07044f5579ef0212117259db1f31818d573d",
         "source": "https://cyclonedx.org/use-cases/authenticity-verification/"
     },
     {
-        "file": "cyclonedx-1.7/json/identify-known-vulnerabilities.json",
+        "file": "cyclonedx-1.7/json/identify-known-vulnerabilities.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Identify Known Vulnerabilities",
         "sha256": "a206545ef31201222f9dcb9a264894655a707d693228d43e878f11670867095e",
         "source": "https://cyclonedx.org/use-cases/identify-known-vulnerabilities/"
     },
     {
-        "file": "cyclonedx-1.7/json/integrity-verification.json",
+        "file": "cyclonedx-1.7/json/integrity-verification.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Integrity Verification",
         "sha256": "89971d8dac727f7b917936c3d757b0816bdfec1d183718ff95b1763c7e76dbea",
         "source": "https://cyclonedx.org/use-cases/integrity-verification/"
     },
     {
-        "file": "cyclonedx-1.7/json/optimize-remediation-efforts.json",
+        "file": "cyclonedx-1.7/json/optimize-remediation-efforts.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Optimize Remediation Efforts",
         "sha256": "93d6a655ed6dde5d448eb965d208aea3174991d7193bdd23de02478c53997690",
         "source": "https://cyclonedx.org/use-cases/optimize-remediation-efforts/"
     },
     {
-        "file": "cyclonedx-1.7/json/pedigree.json",
+        "file": "cyclonedx-1.7/json/pedigree.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Pedigree",
         "sha256": "9462a4f0af951c8a002b813242bc5de8188ec430a928a4b912615f3d63deb638",
         "source": "https://cyclonedx.org/use-cases/pedigree/"
     },
     {
-        "file": "cyclonedx-1.7/json/provenance.json",
+        "file": "cyclonedx-1.7/json/provenance.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Provenance",
         "sha256": "96889c27f7f1486cbd7d5b96b3af45e6e098cab6e996e5c31a36fe37aa26265c",
         "source": "https://cyclonedx.org/use-cases/provenance/"
     },
     {
-        "file": "cyclonedx-1.7/json/vulnerability-disclosure.json",
+        "file": "cyclonedx-1.7/json/vulnerability-disclosure.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Vulnerability Disclosure",
         "sha256": "d85921ac45fcc818592d205ef3e61cc558cbd6b71c79b26a31e4930f55c02740",
         "source": "https://cyclonedx.org/use-cases/vulnerability-disclosure/"
     },
     {
-        "file": "cyclonedx-1.7/json/vulnerability-exploitability.json",
+        "file": "cyclonedx-1.7/json/vulnerability-exploitability.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Vulnerability Exploitability",
         "sha256": "3f7ea314603d9f10149637e237d80e653fd663a727a9e1d1e60c3f92c451d5f0",
