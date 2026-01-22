@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
     env:
       GOEXPERIMENT: jsonv2
@@ -18,17 +19,19 @@ jobs:
       run:
         working-directory: ./go
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - name: Set up Go
+      - name: ⚙️ Set up Go
         uses: actions/setup-go@v6
         with:
           go-version-file: 'go/go.mod'
+          cache-dependency-path: go/go.sum
+          cache: false
 
       - run: go version
     
-      - name: Build
+      - name: 🔨 Build
         run: go build -v
     
-      - name: Run Tests
+      - name: ✅ Run Tests
         run: go test -v
