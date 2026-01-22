@@ -98,5 +98,15 @@
         "name": "SPDX 3.0 JSON - Full Example",
         "sha256": "8f04e9472e65f3a8561b143a7f70b300568829bf42cb0f64bb41132fe098a8e8",
         "source": "https://github.com/spdx/spdx-spec/blob/develop/examples/jsonld/spdx-full-example.json"
+    },
+    {
+        "file": "spdx-2.2/json/SPDXJSONExample-v2.2.spdx.json",
+        "file-canonical": "spdx-2.2/json/SPDXJSONExample-v2.2-canonical.spdx.json",
+        "file-min": "spdx-2.2/json/SPDXJSONExample-v2.2-min.spdx.json",
+        "file-pretty": "spdx-2.2/json/SPDXJSONExample-v2.2-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX 2.2 JSON - Example",
+        "sha256": "8087b5f878972e7574a57bf6db47ef2211a870a88ff4087ff006a392c9e764d9",
+        "source": "https://github.com/spdx/spdx-spec/blob/support/2.3/examples/SPDXJSONExample-v2.2.spdx.json"
     }
 ]
