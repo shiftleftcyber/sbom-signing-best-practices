@@ -78,5 +78,25 @@
         "name": "CycloneDX 1.7 JSON - Vulnerability Exploitability",
         "sha256": "3f7ea314603d9f10149637e237d80e653fd663a727a9e1d1e60c3f92c451d5f0",
         "source": "https://cyclonedx.org/use-cases/vulnerability-exploitability/"
+    },
+    {
+        "file": "spdx-3.0/json/package_sbom.spdx.json",
+        "file-canonical": "spdx-3.0/json/package_sbom-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/package_sbom-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/package_sbom-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX 3.0 JSON - Package SBOM",
+        "sha256": "a3cdd5ff28ae4c4d3bdbbaf2bb8ca669ded66833861764507257573ff2798faf",
+        "source": "https://github.com/spdx/spdx-spec/blob/develop/examples/jsonld/package_sbom.json"
+    },
+    {
+        "file": "spdx-3.0/json/full-example.spdx.json",
+        "file-canonical": "spdx-3.0/json/full-example-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/full-example-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/full-example-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX 3.0 JSON - Full Example",
+        "sha256": "8f04e9472e65f3a8561b143a7f70b300568829bf42cb0f64bb41132fe098a8e8",
+        "source": "https://github.com/spdx/spdx-spec/blob/develop/examples/jsonld/spdx-full-example.json"
     }
 ]
