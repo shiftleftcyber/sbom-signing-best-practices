@@ -28,7 +28,8 @@ jobs:
           cache-dependency-path: go/go.sum
           cache: false
 
-      - run: go version
+      - name: 👀 Display Go version
+        run: go version
     
       - name: 🔨 Build
         run: go build -v
