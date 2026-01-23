@@ -31,7 +31,6 @@ func TestHash(t *testing.T) {
 	json.Unmarshal(content, &manifest)
 
 	for _, testCase := range manifest {
-		//t.Run(testCase.Name, func(t *testing.T) {
 		if testCase.Format != "json" {
 			t.Skip("XML not yet implemented")
 		}
@@ -61,6 +60,5 @@ func TestHash(t *testing.T) {
 				}
 			})
 		}
-		//})
 	}
 }

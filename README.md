@@ -5,7 +5,7 @@
 A reference implementation and test suite for computing **canonical hashes** of
 SBOMs (Software Bill of Materials). This project demonstrates
 **interoperability** across languages to support reliable **SBOM signing**
-and integrity verification.
+and **integrity verification**.
 
 ## Supported Standards
 
@@ -21,9 +21,9 @@ and integrity verification.
 The goal is **Deterministic Hashing**: to compute a hash of the SBOM content
 itself, not its formatting.
 
-Deterministic hashing is accomplished by **normalizing the data using
-canonicalization** prior to computing the hash. This ensures that the same logical
-content always produces the same hash, regardless of formatting differences.
+Deterministic hashing is accomplished by using **canonicalization** prior to
+computing the hash. This ensures that the same logical content always produces
+the same hash, regardless of formatting differences.
 
 This approach enables SBOMs to be transmitted over the wire in any form (for
 example, either "minified" or "pretty-printed" JSON) while the computed hash
@@ -36,7 +36,7 @@ implementations and representations:
 ## Directory Structure
 
 * `test-vectors/`: The shared "golden" set of SBOMs and their expected hashes.
-* `specs/`: Technical details on the normalization rules used.
+* `specs/`: Technical details on the canonicalization rules used.
 * `go/`: Go implementation.
 * `python/`: Python implementation.
 * ... (other languages)

@@ -11,7 +11,7 @@ The implementation should detect the format based on the following:
 - **JSON:** Must start with `{`.
 - **XML:** Must start with `<?xml` or `<`.
 
-## 3. Normalization Rules
+## 3. Canonicalization Rules
 
 ### 3.1 JSON (CycloneDX & SPDX)
 
@@ -38,8 +38,8 @@ All XML inputs must be processed according to
 
 1. Load SBOM.
 2. Identify Format (JSON/XML).
-3. Apply Normalization (JCS or C14N).
-4. Compute SHA-256 of the normalized bytes.
+3. Apply Canonicalization (JCS or C14N).
+4. Compute SHA-256 of the canonicalized bytes.
 5. Return Hex string.
 
 ## 6. Exclusion Rules (CycloneDX)
@@ -52,4 +52,4 @@ before hashing.
 2. **User-Defined Exclusions:** Implementations must support the `excludes`
 property (if present) in JSF to remove other specified fields before hashing.
 3. **Ordering:** Exclusions must be processed **before** the JCS or C14N
-normalization.
+canonicalization.
