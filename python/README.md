@@ -18,7 +18,7 @@ SHA-256 hashes of SBOMs used for signing and verification.
 ## Quick Start
 
 1. Install Dependencies
-   - `pip install jcs pytest`
+   - `pip install -r requirements.txt`
 
 2. Run Tests
    - `python test -v`
