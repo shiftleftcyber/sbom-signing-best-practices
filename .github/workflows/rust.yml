@@ -1,0 +1,35 @@
+name: Build and Test Rust Project
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./rust
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+      
+      - name: ✨ Check Formatting
+        run: cargo fmt --all -- --check
+
+      - name: 🧶 Lint Code
+        run: cargo clippy -- -D warnings
+
+      - name: 🔨 Build
+        run: cargo build --verbose
+
+      - name: ✅ Run Tests
+        run: cargo test --verbose
