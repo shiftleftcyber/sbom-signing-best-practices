@@ -1,4 +1,4 @@
-name: Build and Test Go Project
+name: Build and Test Java Project
 
 on:
   push:
