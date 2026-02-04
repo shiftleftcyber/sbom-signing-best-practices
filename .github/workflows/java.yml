@@ -1,0 +1,33 @@
+name: Build and Test Go Project
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./java
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: ⚙️ Set up JDK 
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          cache: maven
+
+      - name: 🔨 Build
+        run: mvn compile
+
+      - name: ✅ Run Tests
+        run: mvn test
