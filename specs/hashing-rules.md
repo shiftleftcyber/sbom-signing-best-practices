@@ -38,9 +38,10 @@ All XML inputs must be processed according to
 
 1. Load SBOM.
 2. Identify Format (JSON/XML).
-3. Apply Canonicalization (JCS or C14N).
-4. Compute SHA-256 of the canonicalized bytes.
-5. Return Hex string.
+3. Apply property exclusion (for CycloneDX only)
+4. Apply Canonicalization (JCS or C14N).
+5. Compute SHA-256 of the canonicalized bytes.
+6. Return Hex string.
 
 ## 6. Exclusion Rules (CycloneDX)
 

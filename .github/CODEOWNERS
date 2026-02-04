@@ -1,14 +1,16 @@
 # Global owners
+
 * @j28smith
 
-# Language specific owners
+## Language specific owners
+
 /go/            @j28smith
-/python/        @j28smith
-/rust/          @j28smith
 /java/          @j28smith
 /javascript/    @j28smith
+/python/        @j28smith
+/rust/          @j28smith
 
-# Specification and Test Vectors
+## Specification and Test Vectors
+
 /specs/         @j28smith
 /test-vectors/  @j28smith
-
