@@ -1,0 +1,48 @@
+{
+  "name": "sbom-hash-js",
+  "version": "0.0.1",
+  "description": "Reference implementation of SBOM Hashing",
+  "type": "module",
+  "main": "hash.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "sbom",
+    "hash",
+    "standard",
+    "canonicalize",
+    "signature",
+    "sign",
+    "verification",
+    "verify",
+    "rfc8785",
+    "cyclonedx",
+    "spdx",
+    "json",
+    "jcs",
+    "jsf"
+  ],
+  "author": "Jason Smith <jsmith@shiftleftcyber.io>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "canonicalize": "2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1",
+    "vitest": "^4.0.18"
+  }
+}
