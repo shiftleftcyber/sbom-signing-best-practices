@@ -1,5 +1,8 @@
 # Java Reference Implementation
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Java](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/java.yml/badge.svg)](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/java.yml)
+
 This directory contains the Java reference implementation for computing canonical
 SHA-256 hashes of SBOMs used for signing and verification.
 

@@ -1,5 +1,8 @@
 # JavaScript Reference Implementation
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![JavaScript](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/javascript.yml/badge.svg)](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/javascript.yml)
+
 This directory contains the JavaScript reference implementation for computing canonical
 SHA-256 hashes of SBOMs used for signing and verification.
 

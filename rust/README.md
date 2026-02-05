@@ -1,5 +1,8 @@
 # Rust Reference Implementation
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Rust](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/rust.yml/badge.svg)](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/rust.yml)
+
 This directory contains the Rust reference implementation for computing canonical
 SHA-256 hashes of SBOMs used for signing and verification.
 
