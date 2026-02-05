@@ -1,4 +1,4 @@
-name: Build and Test Java Project
+name: Java Project
 
 on:
   push:

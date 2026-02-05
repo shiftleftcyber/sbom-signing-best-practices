@@ -1,4 +1,4 @@
-name: Build and Test JavaScript Project
+name: JavaScript Project
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Build and Test Python Project
+name: Python Project
 
 on:
   push:
