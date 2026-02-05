@@ -30,13 +30,13 @@ This is a monorepo. Each language implementation lives in its own directory:
 ### 3. Reporting Issues
 
 - Please specify which language implementation you are using (or if it is a
-flaw in the core spec).
+  flaw in the core spec).
 
 ## Documentation Style
 
 We use `markdownlint` to keep our documentation consistent.
 
 - You can run it locally using the
-[markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
+  [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli).
 - CI will fail if your PR contains linting errors.
 - Configuration is found in `.markdownlint.json`.

@@ -27,11 +27,11 @@ SHA-256 hashes of SBOMs used for signing and verification.
 ## Notes
 
 - Tests read SBOM files from the project's [/test-vectors/](../test-vectors/)
-directory. Do not modify those files for test runs.
+  directory. Do not modify those files for test runs.
 - The implementation should produce deterministic hashes across varied formats
-(original / minified / pretty / canonical).
+  (original / minified / pretty / canonical).
 
 ## Contributing
 
 - Follow repository guidelines in the root [README.md](../README.md) and
-[CONTRIBUTING.md](../CONTRIBUTING.md).
+  [CONTRIBUTING.md](../CONTRIBUTING.md).
