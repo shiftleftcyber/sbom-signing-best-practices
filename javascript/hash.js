@@ -8,14 +8,13 @@ export function computeJsonHash(input) {
   // Apply JSF Signature Exclusions
   if (data.bomFormat && data.bomFormat === 'CycloneDX') {
     if (data.signature) {
-      
       // Handle Dynamic Exclusions (from the 'excludes' property)
       if (data.signature.excludes && Array.isArray(data.signature.excludes)) {
         for (const property of data.signature.excludes) {
           delete data[property];
         }
       }
-      
+
       // Handle JSF Core Requirement: Delete ONLY the "value" property
       // This leaves 'algorithm', 'publicKey', etc., in the hash.
       delete data.signature.value;
