@@ -9,9 +9,7 @@ pub fn compute_json_hash(input: &[u8]) -> Result<String, Box<dyn std::error::Err
     if data["bomFormat"] == "CycloneDX" {
         let mut exclusions = Vec::new();
         if let Some(signature) = data.get_mut("signature") {
-
             if let Some(signature_map) = signature.as_object_mut() {
-
                 // Handle Dynamic Exclusions (from the 'excludes' property)
                 if let Some(excludes) = signature_map.get("excludes").and_then(|e| e.as_array()) {
                     for property in excludes {
