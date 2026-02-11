@@ -15,7 +15,7 @@ and **integrity verification**.
 
 ## Supported Standards
 
-| Standard | Version | Formats | Canonicalization Method |
+| Standard | Version | Format | Canonicalization Method |
 | :--- | :--- | :--- | :--- |
 | **CycloneDX** | 1.7 | JSON | RFC 8785 (JCS) |
 | **CycloneDX** | 1.7 | XML | W3C Exclusive C14N * |
