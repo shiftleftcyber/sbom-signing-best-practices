@@ -18,11 +18,13 @@ and **integrity verification**.
 | Standard | Version | Formats | Canonicalization Method |
 | :--- | :--- | :--- | :--- |
 | **CycloneDX** | 1.7 | JSON | RFC 8785 (JCS) |
-| **CycloneDX** | 1.7 | XML | W3C Exclusive C14N |
-| **SPDX** | 2.2 | JSON-LD | RFC 8785 (JCS) * |
-| **SPDX** | 2.2 | XML | W3C Exclusive C14N |
-| **SPDX** | 3.0 | JSON-LD | RFC 8785 (JCS) * |
-| **SPDX** | 3.0 | XML | W3C Exclusive C14N |
+| **CycloneDX** | 1.7 | XML | W3C Exclusive C14N * |
+| **SPDX** | 2.2 | JSON | RFC 8785 (JCS) |
+| **SPDX** | 2.2 | XML | W3C Exclusive C14N * |
+| **SPDX** | 3.0 | JSON-LD | RFC 8785 (JCS) |
+| **SPDX** | 3.0 | XML | W3C Exclusive C14N * |
+
+\* XML Work is still TODO.
 
 ## Goal
 
@@ -39,7 +41,7 @@ remains identical as long as the actual content has not changed. This allows for
 reliable **SBOM signing and integrity verification** across different
 implementations, representations, and platforms:
 
-> `Hash(Go_Impl(sbom.json))` == `Hash(Python_Impl(sbom.json))`
+> `Hash(Go_Impl(sbom-pretty.json))` == `Hash(Python_Impl(sbom-min.json))`
 
 ## Directory Structure
 

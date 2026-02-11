@@ -4,25 +4,26 @@ import jcs
 
 
 def compute_json_hash(input_bytes: bytes) -> str:
-    # 1. Parse JSON
+    # Parse JSON
     data = json.loads(input_bytes)
 
-    # 2. Apply Exclusions (CycloneDX signature pruning)
+    # Apply JSF Signature Exclusions
     if data.get("bomFormat") == "CycloneDX":
         signature = data.get("signature")
         if isinstance(signature, dict):
-            # Extract exclusions from the signature block
+            # Handle Dynamic Exclusions (from the 'excludes' property)
             exclusions = signature.get("excludes", [])
-            # Always remove the signature itself
-            if "signature" not in exclusions:
-                exclusions.append("signature")
 
             # Apply all exclusions
             for property_name in exclusions:
                 data.pop(property_name, None)
 
-    # 3. Apply RFC 8785 (JCS).
+            # Handle JSF Core Requirement: Delete ONLY the "value" property
+            # This leaves 'algorithm', 'publicKey', etc., in the hash.
+            signature.pop("value", None)
+
+    # Apply RFC 8785 (JCS)
     canonical_bytes = jcs.canonicalize(data)
 
-    # 4. Hash the canonical bytes
+    # Hash the canonical bytes
     return hashlib.sha256(canonical_bytes).hexdigest()

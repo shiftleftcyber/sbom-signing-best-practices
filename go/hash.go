@@ -16,42 +16,44 @@ func ComputeJSONHash(input []byte) (string, error) {
 		return "", fmt.Errorf("Failed to parse JSON: %w", err)
 	}
 
-	// 1. Apply Exclusions (only for CycloneDX embedded signatures)
-	if f, ok := data["bomFormat"].(string); ok && f == "CycloneDX" {
-		// Check if there's a signature block
-		if signature := data["signature"]; signature != nil {
-			if m, ok := signature.(map[string]interface{}); ok {
-				// Extract any additional exclusions from the signature block
-				var exclusions []string
-				if rawExcludes, ok := m["excludes"].([]interface{}); ok {
-					for _, e := range rawExcludes {
-						if s, ok := e.(string); ok {
-							exclusions = append(exclusions, s)
+	// Apply JSF Signature Exclusions
+	if bomFormat, ok := data["bomFormat"].(string); ok && bomFormat == "CycloneDX" {
+		if signature, ok := data["signature"]; ok && signature != nil {
+			if signatureMap, ok := signature.(map[string]interface{}); ok {
+
+				// Handle Dynamic Exclusions (from the 'excludes' property)
+				if excludes, ok := signatureMap["excludes"].([]interface{}); ok {
+					for _, e := range excludes {
+						if propName, ok := e.(string); ok {
+							// These are excluded from the root object
+							delete(data, propName)
 						}
 					}
 				}
-				// Always remove signature property before hashing
-				exclusions = append(exclusions, "signature")
 
-				// Apply all exclusions
-				for _, property := range exclusions {
-					delete(data, property)
-				}
+				// Handle JSF Core Requirement: Delete ONLY the "value" property
+				// This leaves 'algorithm', 'publicKey', etc., in the hash.
+				delete(signatureMap, "value")
 			}
 		}
 	}
 
-	// 2. Re-marshal to JSON so we can canonicalize the raw bytes
+	// Re-marshal to JSON so we can canonicalize the raw bytes
 	jsonBytes, err := json.Marshal(data)
 	if err != nil {
 		return "", fmt.Errorf("Failed to marshal pruned JSON: %w", err)
 	}
 
-	// 3. Apply RFC 8785 (JCS)
+	// Apply RFC 8785 (JCS)
 	canonicalBytes := jsontext.Value(jsonBytes)
 	canonicalBytes.Canonicalize()
 
-	// 4. Hash the canonical bytes
+	// Hash the canonical bytes
+	hash := sha256.Sum256(canonicalBytes)
+
+	return hex.EncodeToString(hash[:]), nil
+}
+
 	hash := sha256.Sum256(canonicalBytes)
 
 	return hex.EncodeToString(hash[:]), nil

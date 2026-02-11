@@ -26,13 +26,14 @@ public class Hash {
       throw new IllegalArgumentException("Input is not a JSON object");
     }
 
-    // Apply Exclusions (only for CycloneDX embedded signatures)
+    // Apply JSF Signature Exclusions
     JsonNode bomFormat = objectRoot.get("bomFormat");
     if (bomFormat != null && "CycloneDX".equals(bomFormat.asText())) {
-      // Check if there is a signature block
       JsonNode signature = objectRoot.get("signature");
       if (signature != null && signature.isObject()) {
-        // Extract any additional exclusions from the signature block
+        ObjectNode signatureObject = (ObjectNode) signature;
+
+        // Handle Dynamic Exclusions (from the 'excludes' property)
         JsonNode excludes = signature.get("excludes");
         if (excludes != null && excludes.isArray()) {
           ArrayNode excludesArray = (ArrayNode) excludes;
@@ -42,8 +43,10 @@ public class Hash {
             objectRoot.remove(path);
           }
         }
-        // Always remove signature property before hashing
-        objectRoot.remove("signature");
+
+        // Handle JSF Core Requirement: Delete ONLY the "value" property
+        // This leaves 'algorithm', 'publicKey', etc., in the hash.
+        signatureObject.remove("value");
       }
     }
 

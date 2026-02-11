@@ -6,7 +6,7 @@
         "file-pretty": "cyclonedx-1.7/json/authenticity-verification-pretty.cdx.json",
         "format": "json",
         "name": "CycloneDX 1.7 JSON - Authenticity Verification",
-        "sha256": "500005de7b21a9f44aa3a73f793f07044f5579ef0212117259db1f31818d573d",
+        "sha256": "1e330add9d6b0808bf788a8a001c5dfc988f6148c8e0356c6b8200b882697ead",
         "source": "https://cyclonedx.org/use-cases/authenticity-verification/"
     },
     {

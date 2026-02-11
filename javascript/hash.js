@@ -2,26 +2,29 @@ import { createHash } from 'node:crypto';
 import canonicalize from 'canonicalize';
 
 export function computeJsonHash(input) {
+  // Parse JSON
   const data = JSON.parse(input);
 
-  // Apply Exclusions (only for CycloneDX embedded signatures)
+  // Apply JSF Signature Exclusions
   if (data.bomFormat && data.bomFormat === 'CycloneDX') {
-    // Check if there's a signature block
     if (data.signature) {
-      // Extract any additional exclusions from the signature block
+      
+      // Handle Dynamic Exclusions (from the 'excludes' property)
       if (data.signature.excludes && Array.isArray(data.signature.excludes)) {
         for (const property of data.signature.excludes) {
           delete data[property];
         }
       }
-      // Always exclude the signature block itself
-      delete data.signature;
+      
+      // Handle JSF Core Requirement: Delete ONLY the "value" property
+      // This leaves 'algorithm', 'publicKey', etc., in the hash.
+      delete data.signature.value;
     }
   }
 
-  // RFC 8785 Canonicalization
+  // Apply RFC 8785 (JCS)
   const canonicalJson = canonicalize(data);
 
-  // SHA-256 Hashing
+  // Hash the canonical bytes
   return createHash('sha256').update(canonicalJson).digest('hex');
 }
