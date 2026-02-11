@@ -53,8 +53,3 @@ func ComputeJSONHash(input []byte) (string, error) {
 
 	return hex.EncodeToString(hash[:]), nil
 }
-
-	hash := sha256.Sum256(canonicalBytes)
-
-	return hex.EncodeToString(hash[:]), nil
-}
