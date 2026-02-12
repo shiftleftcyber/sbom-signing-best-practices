@@ -1,0 +1,33 @@
+name: Linter Checks
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  markdown-lint:
+    name: Markdown Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Run Markdown Linter
+        uses: davidanson/markdownlint-cli2-action@v22
+        with:
+          globs: "**/*.md"
+          config: ".markdownlint.json"
+
+  python-lint:
+    name: Python Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Run Ruff Python Linter
+        uses: astral-sh/ruff-action@v3
+        with:
+          src: "./python"

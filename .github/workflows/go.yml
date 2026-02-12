@@ -1,0 +1,38 @@
+name: Go Project
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    env:
+      GOEXPERIMENT: jsonv2
+    defaults:
+      run:
+        working-directory: ./go
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: ⚙️ Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: 'go/go.mod'
+          cache-dependency-path: go/go.sum
+          cache: false
+
+      - name: 👀 Display Go version
+        run: go version
+    
+      - name: 🔨 Build
+        run: go build -v
+    
+      - name: ✅ Run Tests
+        run: go test -v

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7"
+     serialNumber="urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79"
+     version="1">
+    <components>
+        <component type="application">
+            <name>Example Application</name>
+            <version>1.0.0</version>
+            <!-- This proprietary component has a CPE, PURL-SWID, and SWID specified -->
+            <cpe>cpe:/a:acme:example_application:1.0.0</cpe>
+            <purl>pkg:swid/Acme/example.com/Example%20Application@1.0.0?tag_id=83f4f966-9a9a-4892-a254-473838c57ac4</purl>
+            <swid tagId="83f4f966-9a9a-4892-a254-473838c57ac4" name="Example Application" version="1.0.0">
+                <text content-type="text/xml" encoding="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+CjxTb2Z0d2FyZUlkZW50aXR5IHhtbDpsYW5nPSJFTiIgbmFtZT0iRXhhbXBsZSBBcHBsaWNhdGlvbiIgdmVyc2lvbj0iMS4wLjAiIAogICAgdmVyc2lvblNjaGVtZT0ibXVsdGlwYXJ0bnVtZXJpYyIgCiAgICB0YWdJZD0iODNmNGY5NjYtOWE5YS00ODkyLWEyNTQtNDczODM4YzU3YWM0IiAKICAgIHhtbG5zPSJodHRwOi8vc3RhbmRhcmRzLmlzby5vcmcvaXNvLzE5NzcwLy0yLzIwMTUvc2NoZW1hLnhzZCI+CgogICAgPEVudGl0eSBuYW1lPSJBY21lIiByZWdpZD0iZXhhbXBsZS5jb20iIHJvbGU9InNvZnR3YXJlQ3JlYXRvciIgLz4gCiAgICA8RW50aXR5IG5hbWU9IkFjbWUiIHJlZ2lkPSJleGFtcGxlLmNvbSIgcm9sZT0idGFnQ3JlYXRvciIgLz4gCjwvU29mdHdhcmVJZGVudGl0eT4=</text>
+            </swid>
+        </component>
+        <component type="library">
+            <group>org.apache.tomcat</group>
+            <name>tomcat-catalina</name>
+            <version>9.0.14</version>
+            <!-- This open source component has a PURL specified -->
+            <purl>pkg:maven/org.apache.tomcat/tomcat-catalina@9.0.14</purl>
+        </component>
+    </components>
+</bom>
