@@ -17,14 +17,12 @@ and **integrity verification**.
 
 | Standard | Version | Format | Canonicalization Method |
 | :--- | :--- | :--- | :--- |
-| **CycloneDX** | 1.7 | JSON | RFC 8785 (JCS) |
-| **CycloneDX** | 1.7 | XML | W3C Exclusive C14N * |
+| **CycloneDX** | 1.7 | JSON | JSF Exclusion + JCS (RFC 8785) |
 | **SPDX** | 2.2 | JSON | RFC 8785 (JCS) |
-| **SPDX** | 2.2 | XML | W3C Exclusive C14N * |
 | **SPDX** | 3.0 | JSON-LD | RFC 8785 (JCS) |
-| **SPDX** | 3.0 | XML | W3C Exclusive C14N * |
 
-\* XML Work is still TODO.
+\* Canonical hashing for XML formats (CycloneDX and SPDX) is currently under
+   evaluation and is slated for a future release.
 
 ## Goal
 
@@ -43,15 +41,19 @@ implementations, representations, and platforms:
 
 > `Hash(Go_Impl(sbom-pretty.json))` == `Hash(Python_Impl(sbom-min.json))`
 
+Technical details of the SBOM hashing process is outlined here:
+
+- [/specs/README.md](/specs/README.md)
+
 ## Directory Structure
 
-* `go/`: Go reference implementation.
-* `java/`: Java reference implementation.
-* `javascript/`: JavaScript reference implementation.
-* `python/`: Python reference implementation.
-* `rust/`: Rust reference implementation.
-* `specs/`: Technical details on the canonicalization rules used.
-* `test-vectors/`: The shared "golden" set of SBOMs and their expected hashes.
+- `go/`: Go reference implementation.
+- `java/`: Java reference implementation.
+- `javascript/`: JavaScript reference implementation.
+- `python/`: Python reference implementation.
+- `rust/`: Rust reference implementation.
+- `specs/`: Technical details on the canonicalization rules used.
+- `test-vectors/`: The shared "golden" set of SBOMs and their expected hashes.
 
 ## Getting Started
 
