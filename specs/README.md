@@ -38,15 +38,17 @@ and only semantic content is hashed:
 For simplicity, all reference implementations use the SHA-256 hashing algorithm
 and the hash output is returned as a hexadecimal string.
 
-## Current Known Limitations
+## Current Known Limitations / Future Improvements
 
 - The reference implementations currently support the JSF simple signature format
  (signaturecore) only.  Multiple signatures (multisignature) and signature chains
  (signaturechain) are not yet supported.
 - Hash algorithms are currently hard-coded to use SHA-256.  An improvement could
-  be made to support more algorithms here.
-- We are using a similar JSF process for both CycloneDX and SPDX, however property
+  be made to support multiple algorithms.
+- We are using the same JCS process for both CycloneDX and SPDX, however JSF property
   exclusion is only applied for CycloneDX SBOMs.
+- SBOM validation could be applied initially to better ensure the provided input
+  SBOMs strictly conform to the CycloneDX or SPDX schemas.
 
 ## Notes
 

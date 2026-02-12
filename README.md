@@ -8,42 +8,38 @@
 [![Python](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/python.yml/badge.svg)](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/python.yml)
 [![Rust](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/rust.yml/badge.svg)](https://github.com/shiftleftcyber/sbom-signing-best-practices/actions/workflows/rust.yml)
 
-A set of reference implementations and test suites for computing the **canonical
-hashes** of SBOMs (Software Bill of Materials). This project demonstrates
-**interoperability** across multiple languages to support reliable **SBOM signing**
-and **integrity verification**.
+A set of reference implementations and test suites for computing canonical
+hashes of Software Bill of Materials (SBOMs). This project demonstrates
+multi-language interoperability to support reliable signing and integrity verification.
 
 ## Supported Standards
 
-| Standard | Version | Format | Canonicalization Method |
-| :--- | :--- | :--- | :--- |
-| **CycloneDX** | 1.7 | JSON | JSF Exclusion + JCS (RFC 8785) |
-| **SPDX** | 2.2 | JSON | RFC 8785 (JCS) |
-| **SPDX** | 3.0 | JSON-LD | RFC 8785 (JCS) |
+| Standard | Version | Format | Canonicalization | Signature Spec |
+| :--- | :--- | :--- | :--- | :--- |
+| **CycloneDX** | 1.7 | JSON | JCS (RFC 8785) | JSF |
+| **SPDX** | 2.2 | JSON | JCS (RFC 8785) | Undefined (detached) |
+| **SPDX** | 3.0 | JSON-LD | JCS (RFC 8785) | Undefined (detached) |
 
 \* Canonical hashing for XML formats (CycloneDX and SPDX) is currently under
    evaluation and is slated for a future release.
 
-## Goal
+## The Goal: Deterministic Hashing
 
-The goal is **Deterministic Hashing**: to compute a hash of the SBOM content
-itself, not its formatting.
+The objective is to compute a hash of the SBOM **content**, independent of its **formatting**.
 
-Deterministic hashing is accomplished by using **canonicalization** prior to
-computing the hash. This ensures that the same logical content always produces
-the same hash, regardless of formatting differences.
-
-This approach enables SBOMs to be transmitted over the wire in any form (for
-example, either "minified" or "pretty-printed" JSON) while the computed hash
-remains identical as long as the actual content has not changed. This allows for
-reliable **SBOM signing and integrity verification** across different
-implementations, representations, and platforms:
+By applying **canonicalization** (JCS) and **pruning** (JSF) prior to hashing, we
+ensure that the same logical data always produces the same hash. This allows
+SBOMs to be transmitted in any form — whether "minified" or "pretty-printed" — while
+maintaining a stable cryptographic identity across different platforms:
 
 > `Hash(Go_Impl(sbom-pretty.json))` == `Hash(Python_Impl(sbom-min.json))`
 
-Technical details of the SBOM hashing process is outlined here:
+## Technical Specification
 
-- [/specs/README.md](/specs/README.md)
+The exact rules for property exclusion, signature handling, and serialization
+are detailed in the technical spec:
+
+- [Technical Specification: JSON SBOM Canonical Hashing](/specs/README.md)
 
 ## Directory Structure
 
@@ -53,8 +49,9 @@ Technical details of the SBOM hashing process is outlined here:
 - `python/`: Python reference implementation.
 - `rust/`: Rust reference implementation.
 - `specs/`: Technical details on the canonicalization rules used.
-- `test-vectors/`: The shared "golden" set of SBOMs and their expected hashes.
+- `test-vectors/`: Shared "golden" SBOMs and a test manifest file including the
+  expected hashes used to verify cross-language parity.
 
 ## Getting Started
 
-See the `README.md` in each language directory for build instructions.
+Refer to the `README.md` in each language directory for build instructions.
