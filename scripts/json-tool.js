@@ -7,7 +7,7 @@ import path from 'node:path';
 const [,, filePath, mode = 'pretty'] = process.argv;
 
 if (!filePath) {
-    console.error("Usage: node json-tool.mjs <file-path> [pretty|min|canon]");
+    console.error("Usage: node json-tool.js <file-path> [pretty|min|canon]");
     process.exit(1);
 }
 
