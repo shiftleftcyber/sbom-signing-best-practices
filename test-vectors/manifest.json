@@ -108,5 +108,255 @@
         "name": "SPDX 2.2 JSON - Example",
         "sha256": "8087b5f878972e7574a57bf6db47ef2211a870a88ff4087ff006a392c9e764d9",
         "source": "https://github.com/spdx/spdx-spec/blob/support/2.3/examples/SPDXJSONExample-v2.2.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/ai-example01-simplehtr-example.spdx.json",
+        "file-canonical": "spdx-3.0/json/ai-example01-simplehtr-example-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/ai-example01-simplehtr-example-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/ai-example01-simplehtr-example-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - AI Example 01 - Simple HTR Example",
+        "sha256": "ba08bb37d0f44c86979f487929f375e87d2f616b3aaa014fef961eb24faa749a",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/ai/example01/spdx3.0/simplehtr-example.json"
+    },
+    {
+        "file": "spdx-3.0/json/ai-example02-text-sentiment-analysis-example.spdx.json",
+        "file-canonical": "spdx-3.0/json/ai-example02-text-sentiment-analysis-example-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/ai-example02-text-sentiment-analysis-example-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/ai-example02-text-sentiment-analysis-example-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - AI Example 02 - Text Sentiment Analysis",
+        "sha256": "db373b89df2a4553a5c94e4dfc22f96a33bfa7e71f03b5806be30f01e4cf1f78",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/ai/example02/spdx3.0/sbom.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/dataset-example01.spdx.json",
+        "file-canonical": "spdx-3.0/json/dataset-example01-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/dataset-example01-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/dataset-example01-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Dataset Example 01 - Simple Dataset",
+        "sha256": "a1667316f3fbba7bdbfb79ab1e51f13d0f8b8abe490bdbdaa3866bf18f5d1e87",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/dataset/example01/spdx3.0/example01.spdx3.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example01-hello-world.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example01-hello-world-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example01-hello-world-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example01-hello-world-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 01 - Hello World",
+        "sha256": "074833f477fb6852a4eae0dd13699ef23487061317c70f6254c84384afe8bed4",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example1/spdx3.0/example1.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example03-bin.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example03-bin-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example03-bin-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example03-bin-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 03 - Binary",
+        "sha256": "c08a0b32bd5d6c1c59597c52e084c4f0c6f87579e0de353476b9ef4df21cbd00",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example3/spdx3.0/example3-bin.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example03-src.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example03-src-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example03-src-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example03-src-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 03 - Source",
+        "sha256": "1a12d2d8cfe5daa482b10c5f07b35025d685ce82e2c530e97313a57066837707",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example3/spdx3.0/example3-src.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example04-bin.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example04-bin-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example04-bin-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example04-bin-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 04 - Binary",
+        "sha256": "a74defeaa4a20b73e8ef57bca446cc946aef45e89a2e87fc8f9a6317f337d918",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example4/spdx3.0/example4-bin.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example04-src.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example04-src-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example04-src-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example04-src-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 04 - Source",
+        "sha256": "e53f8debe4dfa87694aa3521d05e141c4c5e2af9dc064ee9ffbc4fef88b1f422",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example4/spdx3.0/example4-src.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example05-bin.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example05-bin-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example05-bin-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example05-bin-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 05 - Binary",
+        "sha256": "1cb52936e1f6691c2a4268daaf235d27c68fb9ca69e8a63bcf65afd00fc3d6fe",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example5/spdx3.0/example5-bin.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example05-src.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example05-src-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example05-src-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example05-src-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 05 - Source",
+        "sha256": "e74bb37bbb02a4cc63b7bfb85f7b8011ad1d066adae114f76c83682b523e8d74",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example5/spdx3.0/example5-src.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example06-bin.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example06-bin-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example06-bin-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example06-bin-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 06 - Binary",
+        "sha256": "b1ab50612eaa1d32e9ace08643d418c6829f152f866819a5141ad868ec9a0819",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example6/spdx3.0/example6-bin.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example06-lib.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example06-lib-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example06-lib-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example06-lib-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 06 - Library",
+        "sha256": "3e19f0b43c5fe0835ff602eaec5c61379fb8f02b1fabc71eab93f4b236e61f2a",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example6/spdx3.0/example6-lib.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example06-src.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example06-src-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example06-src-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example06-src-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 06 - Source",
+        "sha256": "6260177f8cf59cd5b0d2ff8ca9fc8c4dc1150b1faa32baba7771fa6773c36e77",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example6/spdx3.0/example6-src.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example07-bin.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example07-bin-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example07-bin-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example07-bin-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 07 - Binary",
+        "sha256": "18da13f20628e722815d3e87245b8d5fc69ab263979f9a89f8d03252be9761c7",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example7/spdx3.0/example7-bin.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example07-go-module.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example07-go-module-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example07-go-module-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example07-go-module-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 07 - Go Module",
+        "sha256": "71fb43c8e981d20f388b4fd7827246886d606847b49adc2fe306181c23a3a87f",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example7/spdx3.0/example7-go-module.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example07-golang.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example07-golang-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example07-golang-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example07-golang-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 07 - Golang",
+        "sha256": "f12233ad68b5353a3498cc35b01d66e9fac505b7a826d49c6d1b586ead9cc17b",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example7/spdx3.0/example7-golang.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example07-third-party-modules.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example07-third-party-modules-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example07-third-party-modules-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example07-third-party-modules-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 07 - Third Party Modules",
+        "sha256": "595716304837b8aee50de0414329186c9939bceb828db56bfa9508057a947490",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example7/spdx3.0/example7-third-party-modules.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example08-maven.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example08-maven-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example08-maven-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example08-maven-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 08 - Maven",
+        "sha256": "e34a9802b512252a42e2380b130c3c49202887fef7a2196b4aef877ae77cbc14",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example8/spdx3.0/examplemaven-0.0.1.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example09-appbomination.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example09-appbomination-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example09-appbomination-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example09-appbomination-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 09 - App-BOM-ination",
+        "sha256": "8e78d172b564d99e30dbb1f0e53d85f83d07245a123bdb73314de2013ddb1199",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example9/spdx3.0/appbomination.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example10-python.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example10-python-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example10-python-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example10-python-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 10 - Python",
+        "sha256": "1c8e20906fae26f852bfb4d288022a129b46a3f71dd7f8072f97717f2bddc1cd",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example10/spdx3.0/hello-source.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example11-rust.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example11-rust-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example11-rust-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example11-rust-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 11 - Rust",
+        "sha256": "d8a33651c3cf240216b8f8fa114794d6194593cb599c45886b97cd1fa878bb93",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example11/spdx3.0/sbom.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example12-ruby-dist.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example12-ruby-dist-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example12-ruby-dist-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example12-ruby-dist-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 12 - Ruby - Dist",
+        "sha256": "370bb37db0972e4139e993f912e6fd66469d379e38d4844ec6906f1162e4b7e6",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example12/spdx3.0/hello-dist.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example12-ruby-src.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example12-ruby-src-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example12-ruby-src-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example12-ruby-src-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 12 - Ruby - Source",
+        "sha256": "a801114989c75a79a1415eafa7bef25833b9140e5b2beb44e149c8629aed7ca9",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example12/spdx3.0/hello-src.spdx.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example13-acme.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example13-acme-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example13-acme-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example13-acme-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 13 - Acme Application",
+        "sha256": "c549afe83930c3f234d29ff080c85bc8f6ab5bd178f1f71b869dcb9f65f07706",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example13/spdx3.0/example13.spdx3.json"
+    },
+    {
+        "file": "spdx-3.0/json/software-example14-enriched.spdx.json",
+        "file-canonical": "spdx-3.0/json/software-example14-enriched-canonical.spdx.json",
+        "file-min": "spdx-3.0/json/software-example14-enriched-min.spdx.json",
+        "file-pretty": "spdx-3.0/json/software-example14-enriched-pretty.spdx.json",
+        "format": "json",
+        "name": "SPDX Examples - Software Example 14 - Enriched",
+        "sha256": "cb667950a1d072953bbedcb30e70a5a4ac3d224d3907fc68ecd7be5ba2e69661",
+        "source": "https://github.com/spdx/spdx-examples/blob/master/software/example14/spdx3.0/examplemaven-0.0.1-enriched.spdx.json"
     }
 ]
